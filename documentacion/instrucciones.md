@@ -1,0 +1,1 @@
+revisa cada documento de la carpeta documentación para que funcione como contexto general y después espera mis instrucciones o preguntas
