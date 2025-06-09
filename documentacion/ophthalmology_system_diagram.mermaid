@@ -1,0 +1,133 @@
+graph TB
+    %% Módulo de Gestión de Pacientes
+    subgraph "GESTIÓN DE PACIENTES"
+        A1[Registro Inicial de Paciente]
+        A2[Chatbot de Pre-screening]
+        A3[Validación de Identidad]
+        A4[Historial Médico Digital]
+        A5[Expediente Electrónico]
+    end
+
+    %% Módulo de Citas y Calendario
+    subgraph "GESTIÓN DE CITAS"
+        B1[Chatbot Programación Citas]
+        B2[Calendario Médicos]
+        B3[Confirmación Automática]
+        B4[Recordatorios SMS/Email]
+        B5[Reprogramación Inteligente]
+        B6[Lista de Espera Automatizada]
+    end
+
+    %% Módulo Médico y Diagnóstico
+    subgraph "ATENCIÓN MÉDICA"
+        C1[Check-in Digital]
+        C2[Consulta Médica]
+        C3[Exámenes Oftalmológicos]
+        C4[Análisis de Imagen IA]
+        C5[Diagnóstico Asistido]
+        C6[Prescripción Digital]
+    end
+
+    %% Módulo de Cirugías
+    subgraph "GESTIÓN QUIRÚRGICA"
+        D1[Evaluación Pre-quirúrgica]
+        D2[Programación Cirugías]
+        D3[Preparación Quirófano]
+        D4[Seguimiento Post-operatorio]
+        D5[Alertas Médicas]
+    end
+
+    %% Módulo de Facturación
+    subgraph "FACTURACIÓN Y PAGOS"
+        E1[Generación Automática Facturas]
+        E2[Procesamiento Seguros]
+        E3[Pagos Digitales]
+        E4[Reportes Financieros]
+        E5[Cobranza Automatizada]
+    end
+
+    %% Módulo de Inventario
+    subgraph "GESTIÓN DE INVENTARIO"
+        F1[Control Stock Medicamentos]
+        F2[Gestión Equipos Médicos]
+        F3[Pedidos Automáticos]
+        F4[Alertas Stock Bajo]
+        F5[Trazabilidad de Productos]
+    end
+
+    %% Módulo Administrativo
+    subgraph "ADMINISTRACIÓN"
+        G1[Dashboard Ejecutivo]
+        G2[Reportes Automáticos]
+        G3[Gestión Personal]
+        G4[Análisis Predictivo]
+        G5[Compliance Regulatorio]
+    end
+
+    %% Módulo de Comunicaciones
+    subgraph "COMUNICACIONES"
+        H1[Sistema de Notificaciones]
+        H2[Email Marketing]
+        H3[SMS Automatizados]
+        H4[Portal del Paciente]
+        H5[Telemedicina]
+    end
+
+    %% Conexiones principales
+    A1 --> A2
+    A2 --> A3
+    A3 --> A4
+    A4 --> A5
+    
+    A5 --> B1
+    B1 --> B2
+    B2 --> B3
+    B3 --> B4
+    B4 --> B5
+    B5 --> B6
+    
+    B6 --> C1
+    C1 --> C2
+    C2 --> C3
+    C3 --> C4
+    C4 --> C5
+    C5 --> C6
+    
+    C6 --> D1
+    D1 --> D2
+    D2 --> D3
+    D3 --> D4
+    D4 --> D5
+    
+    C6 --> E1
+    E1 --> E2
+    E2 --> E3
+    E3 --> E4
+    E4 --> E5
+    
+    C3 --> F1
+    F1 --> F2
+    F2 --> F3
+    F3 --> F4
+    F4 --> F5
+    
+    E4 --> G1
+    G1 --> G2
+    G2 --> G3
+    G3 --> G4
+    G4 --> G5
+    
+    B4 --> H1
+    H1 --> H2
+    H2 --> H3
+    H3 --> H4
+    H4 --> H5
+
+    %% Estilos para procesos automatizables
+    classDef automated fill:#e1f5fe,stroke:#01579b,stroke-width:3px
+    classDef semiAutomated fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef manual fill:#fce4ec,stroke:#880e4f,stroke-width:1px
+
+    class A2,A3,B1,B3,B4,B5,B6,C1,C4,C5,C6,D2,D5,E1,E2,E3,E4,E5,F3,F4,G2,G4,H1,H2,H3 automated
+    class A1,A4,C3,D1,D3,F1,F2,F5,G1,G3,G5,H4,H5 semiAutomated
+    class A5,B2,C2,D4,G1 manual
