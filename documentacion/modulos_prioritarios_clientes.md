@@ -73,5 +73,3 @@
    - Encuestas y seguimiento
    - Integración con aseguradoras
    - Portal del paciente
-
-¿Necesitas que profundice en algún módulo específico o que detalle más alguna de las fases de implementación?
